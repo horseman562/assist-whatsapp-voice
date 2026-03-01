@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>WhatsApp Reader</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+
+  <!-- Header with toggle -->
+  <div class="header">
+    <span class="icon" aria-hidden="true">📢</span>
+    <h1>WhatsApp Reader</h1>
+    <label class="toggle" title="Enable / disable reader">
+      <input type="checkbox" id="enabled" />
+      <span class="track"><span class="thumb"></span></span>
+    </label>
+  </div>
+
+  <!-- Voice -->
+  <div class="field">
+    <label for="voice">Voice</label>
+    <select id="voice">
+      <option value="">— System default —</option>
+    </select>
+  </div>
+
+  <!-- Rate -->
+  <div class="field">
+    <label for="rate">Rate <span class="chip" id="rateVal">1.0</span></label>
+    <input type="range" id="rate" min="0.5" max="2.0" step="0.1" value="1.0" />
+    <div class="range-ends"><span>0.5×</span><span>2.0×</span></div>
+  </div>
+
+  <!-- Pitch -->
+  <div class="field">
+    <label for="pitch">Pitch <span class="chip" id="pitchVal">1.0</span></label>
+    <input type="range" id="pitch" min="0.0" max="2.0" step="0.1" value="1.0" />
+    <div class="range-ends"><span>Low</span><span>High</span></div>
+  </div>
+
+  <!-- Volume -->
+  <div class="field">
+    <label for="volume">Volume <span class="chip" id="volumeVal">1.0</span></label>
+    <input type="range" id="volume" min="0.0" max="1.0" step="0.05" value="1.0" />
+    <div class="range-ends"><span>Mute</span><span>Full</span></div>
+  </div>
+
+  <!-- Checkboxes -->
+  <div class="checks">
+    <label class="check-row">
+      <input type="checkbox" id="speakGroup" />
+      <span>Speak group name</span>
+    </label>
+    <label class="check-row">
+      <input type="checkbox" id="speakSender" />
+      <span>Speak sender name</span>
+    </label>
+  </div>
+
+  <!-- Test -->
+  <button id="testBtn">▶ Test voice</button>
+
+  <script src="popup.js"></script>
+</body>
+</html>
